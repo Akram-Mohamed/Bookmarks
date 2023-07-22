@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookmarker</title>
+    <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
+<!-- fontawsome css -->
+    <link rel="stylesheet" href="css/all.min.css">
+<!-- boostrap css -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+<!-- main css -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+   <header id="header" class="header d-flex justify-content-center align-content-center">
+    <h1 class="header-H1 position-relative">
+        Bookmarker
+    </h1>
+   </header>
+<section id="Bookmark-entry" class="Bookmark-entry p-3 py-4 mt-5 d-flex flex-column justify-content-center align-items-center gap-4" >
+        
+        <h2 >
+            <i class="fa-solid fa-bookmark"></i>
+             Bookmark your favorite sites
+            <i class="fa-solid fa-bookmark"></i>
+          </h2>
+
+       <div class="container">
+        <div class="row gy-md-5">
+            <div class="col-12 ">
+            <label for="site-name" class="lbl-name">
+                <i class="fa-solid fa-book-bookmark pe-2"></i>
+                Site Name
+            </label>
+            <input id="site-name" type="text" placeholder="Bookmark Name"  class="form-control p-3" required >
+            </div>
+            <div class="col-12">
+                <label for="site-url" class="lbl-name">
+                    <i class="fa-solid fa-link pe-2"></i>
+                    Site URL
+                </label>
+                <input id="site-url" placeholder="Bookmark Url" type="text"  class="form-control p-3" required>
+            </div>
+            <div class="col-12 text-center">
+                <button id="btn-submit" class="btn btn-danger">Submit</button>
+            </div>
+        </div>
+       </div>
+    </section>
+<section class="box-info position-absolute start-0 top-0 w-100 h-100 d-none justify-content-center align-items-center">
+    <dialog open="" class="rounded-4">
+        <div class="dialog-header d-flex justify-content-between align-items-center  p-2">
+            <div class="circles d-flex"> 
+                <span class="rounded-circle me-2 bg-danger"></span>
+                <span class="rounded-circle me-2 bg-warning"></span>
+                <span class="rounded-circle me-2 bg-success"></span> 
+            </div>
+        
+            <div class="closeIco-holder">
+                <i class="fa-solid fa-xmark"></i>
+              </div>
+          </div>
+        
+          <p class="">
+            Site Name or Url is not valid, Please follow the rules below :
+          </p>
+          <ol class="rules list-unstyled m-0">
+            <li>
+              <i class="fa-regular fa-circle-right p-2"></i>Site name must
+              contain at least 3 characters
+            </li>
+            <li>
+              <i class="fa-regular fa-circle-right p-2"></i>Site URL must be a
+              valid one
+            </li>
+         
+          </ol>
+          
+    </dialog>
+</section>
+
+
+    <section id="display-sec" class="display-sec"> 
+            <table class="table mt-4 text-center bg-light p-5">
+                    <thead>
+                        <th>Index</th>
+                        <th>Website Name</th>
+                        <th>Visit</th>
+                        <th>Delete</th>
+                    </thead>
+             
+                    <tbody id="shown-data" class="mx-5" >
+
+                
+                    </tbody>
+
+                  
+            </table>
+    </section>
+<script src="js/bootstrap.bundle.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
